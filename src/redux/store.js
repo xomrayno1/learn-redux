@@ -5,7 +5,7 @@ import rootSaga from '../sagas/index'
 import rootReducer from './reducers/index'
 
 const sagaMiddleware = createSagaMiddleware();
-const store = compose( 
+const store = compose(
     applyMiddleware(sagaMiddleware),
     window.devToolsExtension && window.devToolsExtension(),
 )(createStore)(rootReducer)
